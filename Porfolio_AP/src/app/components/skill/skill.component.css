@@ -1,0 +1,15 @@
+.sk-h2 {
+    text-align: center;
+  }
+  
+  .sk-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+  }
+  
+  .sk-margin {
+    margin: 0 10px;
+  }

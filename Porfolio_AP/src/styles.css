@@ -1,1 +1,107 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #98e0ff;}
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.body {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    background-color:aliceblue;
+}
+
+.ancho {
+    justify-content: center;
+    width: 80%;
+    background-color: white;
+}
+
+.form {
+    height: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    width: 90%;
+    background-color: white;
+}
+
+.button {
+    height: 50px;
+    align-items: right;
+    justify-content: right;
+}
+
+.addButton {
+    display: flex;
+    justify-content: right;
+    width: 120px;
+}
+
+.edButtons{
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+.imgRight{
+    height: 60px;
+    align-items: right;
+    margin-right: 5px;
+}
+
+.mat-raised-button {
+    display: flex;
+  justify-content: right;
+  flex-wrap: wrap;
+}
+
+.pointer {
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.container {
+  padding: 10px;
+}
+
+.material-card {
+
+    max-width: 450px;
+    padding: 10px; 
+
+  }
+  .project-card{
+    display: flex;
+    margin-top: 10px;
+    max-width: 60%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+  .titleCard{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .subtitleCard{
+    padding-left: 5px;
+  }
+
+  .toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }

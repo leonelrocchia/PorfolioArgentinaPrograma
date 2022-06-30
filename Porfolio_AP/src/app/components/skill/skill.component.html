@@ -1,0 +1,37 @@
+
+    <mat-toolbar color="primary">
+        <span>Habilidades duras y blandas</span>
+       <span class="example-spacer"></span>
+       <div class="addButton">
+        <button mat-mini-fab matTooltip="Agregar" color="accent">
+         <a class="pointer"><mat-icon color="secondary">add</mat-icon></a>
+        </button>
+       </div>
+    </mat-toolbar>
+    <br><br><br><br><br><br><br>
+    <!--debería ser con br para que quede bien esto? nolocreorick-->
+    <div class="container"> 
+        <section class="sk-section">
+        <mat-card>
+            <mat-card-content>
+              <h2 class="sk-h2">sk_nombre}}
+                <!-- revisar como verga hacer para poner la imagen del skill que se desea poner, no va a ser facil pero se puede ver-->
+              <img src="../../../assets/Images/logogithub.png" alt="" height="50px"></h2>
+              <br>
+          
+              <mat-progress-spinner
+                  class="sk-margin"
+                  [mode]="'determinate'"
+                  [value]="70"><!-- sk_nivel}}-->
+                  [imageSrc]
+                  
+              </mat-progress-spinner>
+              
+              <mat-card-actions class="edButtons">
+                <a class="pointer"><mat-icon>edit</mat-icon></a>
+                <a class="pointer"><mat-icon>delete</mat-icon></a>
+              </mat-card-actions>
+            </mat-card-content>
+          </mat-card>
+        </section>
+  </div>
