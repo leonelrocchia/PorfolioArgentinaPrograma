@@ -1,12 +1,25 @@
-.acercade{
+.banner{
     padding: 20px;
     padding-left: 50px;
     padding-right: 50px;
     background-image: url('../../../assets/Images/banner2.jpg');
+    background-color: #80d9ff;
 }
 
 img{
+    position: absolute;
+    box-shadow: 3px 3px 3px grey;
     border-radius: 100%;
+    display: flex;
+    width: 100%;
+    height: auto;
+    max-width: max-content;
+}
+
+
+.acercade{
+    background-color:#49a7cc;
+    padding: 10px;
 }
 
 h1{
@@ -29,16 +42,16 @@ p{
     color: white;
     text-shadow: 3px 3px 3px black;
 }
+
 .title{
-    margin-top: 40px;
+    font-weight: bold;
+    margin-top: -auto;
 }
+
 .parrafo{
-    margin-top: 60px;
+    margin-top:auto;
     margin-right: 20px;
     margin-bottom: 30px;
     padding: 20px;
 }
 
-#fotoPerfil{
-    box-shadow: 3px 3px 3px grey;
-}

@@ -14,6 +14,7 @@ import { SkillComponent } from './components/skill/skill.component';
 import { RedesComponent } from './components/redes/redes.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { ProjectComponent } from './components/project/project.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { ProjectComponent } from './components/project/project.component';
     RedesComponent,
     AcercaDeComponent,
     ProjectComponent,
+    BannerComponent,
 
   ],
   imports: [
