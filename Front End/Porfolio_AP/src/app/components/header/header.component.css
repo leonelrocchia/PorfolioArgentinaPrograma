@@ -12,6 +12,11 @@ h1{
     height: justify ;
 }
 
+.YoProgramo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+}
+
 app-redes{
     float: right;
     margin-top: 25px;

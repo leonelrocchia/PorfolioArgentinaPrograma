@@ -2,13 +2,13 @@
 <mat-toolbar color="secondary" >
   <a href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa">
     <img src="../../../assets/Images/logoAP.png" alt="Argentina Programa" class="logoAp"></a>
-  <span class="example-spacer"></span>
-  <span>Porfolio</span>
+
+  <span class="YoProgramo">#YoProgramo</span>
   <span class="example-spacer"></span>
   <app-redes></app-redes>
   <div class="loginButton">
-    <button mat-mini-fab matTooltip="Login" color="accent">
-    <a class="pointer"><mat-icon color="secondary">login</mat-icon></a>
+    <button mat-mini-fab matTooltip="Login" class="pointer" color="accent" (click)="login()">
+    <mat-icon color="secondary">login</mat-icon>
     </button>
   </div>
 </mat-toolbar>

@@ -9,7 +9,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -22,7 +24,10 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatToolbarModule,
     MatProgressSpinnerModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatSnackBarModule,
+    MatInputModule
   ],
   exports: [
     MatGridListModule,
@@ -31,7 +36,10 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatToolbarModule,
     MatProgressSpinnerModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatSnackBarModule,
+    MatInputModule
   ]
 })
 export class SharedModule { }
