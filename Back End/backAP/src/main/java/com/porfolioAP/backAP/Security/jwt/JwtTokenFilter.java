@@ -1,6 +1,6 @@
 package com.porfolioAP.backAP.Security.jwt;
 
-import com.porfolioAP.backAP.Security.Service.UserDetailsImpl;
+import com.porfolioAP.backAP.Security.Service.UserDetailsServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,24 +18,25 @@ import java.io.IOException;
 
 @Component
 public class JwtTokenFilter extends OncePerRequestFilter {
-    private final static Logger logger = LoggerFactory.getLogger(JwtEntryPoint.class);
+    private final static Logger logger = LoggerFactory.getLogger(JwtProvider.class);
 
     @Autowired
     JwtProvider jwtProvider;
     @Autowired
-    UserDetailsImpl userDetailsImpl;
+    UserDetailsServiceImpl userDetailsServiceImpl;
+
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        try{
+        try {
             String token = getToken(request);
-            if(token != null && jwtProvider.validateToken(token)){
+            if (token != null && jwtProvider.validateToken(token)){
                 String username = jwtProvider.getUsernameFromToken(token);
-                UserDetails userDetails = userDetailsImpl.loadUserByUsername(username);
+                UserDetails userDetails = userDetailsServiceImpl.loadUserByUsername(username);
                 UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                 SecurityContextHolder.getContext().setAuthentication(auth);
             }
-        } catch (Exception e) {
+        } catch(Exception e){
             logger.error("Falló el método doFilterInternal");
         }
         filterChain.doFilter(request, response);
@@ -43,7 +44,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
     private String getToken(HttpServletRequest request){
         String header = request.getHeader("Authorization");
-        if(header != null && header.startsWith("Bearer"))
+        if (header != null && header.startsWith("Bearer"))
             return header.replace("Bearer", "");
         return null;
     }

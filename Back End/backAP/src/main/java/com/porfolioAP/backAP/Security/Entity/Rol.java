@@ -1,14 +1,9 @@
-
 package com.porfolioAP.backAP.Security.Entity;
 
 import com.porfolioAP.backAP.Security.Enums.RolNombre;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import javax.persistence.Id;
 
 @Entity
 public class Rol {
@@ -18,9 +13,8 @@ public class Rol {
     @NotNull
     @Enumerated(EnumType.STRING)
     private RolNombre rolNombre;
-    
-    //Constructor
 
+    //Constructores
     public Rol() {
     }
 
@@ -28,6 +22,8 @@ public class Rol {
         this.rolNombre = rolNombre;
     }
 
+
+    //Getter & setter
     public int getId() {
         return id;
     }

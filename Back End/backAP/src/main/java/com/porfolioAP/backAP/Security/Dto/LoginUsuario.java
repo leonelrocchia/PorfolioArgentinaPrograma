@@ -2,11 +2,14 @@ package com.porfolioAP.backAP.Security.Dto;
 
 import javax.validation.constraints.NotBlank;
 
-public class LoginUser {
+public class LoginUsuario {
     @NotBlank
     private String username;
     @NotBlank
     private String password;
+
+    //Getter & Setter
+
 
     public String getUsername() {
         return username;

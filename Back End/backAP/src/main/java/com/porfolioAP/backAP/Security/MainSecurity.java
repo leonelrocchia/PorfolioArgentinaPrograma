@@ -1,6 +1,6 @@
 package com.porfolioAP.backAP.Security;
 
-import com.porfolioAP.backAP.Security.Service.UserDetailsImpl;
+import com.porfolioAP.backAP.Security.Service.UserDetailsServiceImpl;
 import com.porfolioAP.backAP.Security.jwt.JwtEntryPoint;
 import com.porfolioAP.backAP.Security.jwt.JwtTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class MainSecurity extends WebSecurityConfigurerAdapter {
     @Autowired
-    UserDetailsImpl userDetailsImpl;
+    UserDetailsServiceImpl userDetailsServiceImpl;
     @Autowired
     JwtEntryPoint jwtEntryPoint;
 
@@ -38,11 +38,11 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsImpl).passwordEncoder(passwordEncoder());
+        auth.userDetailsService(userDetailsServiceImpl).passwordEncoder(passwordEncoder());
     }
 
     @Bean
-
+    @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
@@ -56,5 +56,6 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable().authorizeRequests().antMatchers("/auth/**").permitAll().anyRequest().authenticated().and().exceptionHandling().authenticationEntryPoint(jwtEntryPoint).and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+
     }
 }
