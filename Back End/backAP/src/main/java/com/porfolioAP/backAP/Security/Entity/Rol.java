@@ -3,6 +3,8 @@ package com.porfolioAP.backAP.Security.Entity;
 import com.porfolioAP.backAP.Security.Enums.RolNombre;
 
 import javax.persistence.*;
+import javax.persistence.Id;
+
 import javax.validation.constraints.NotNull;
 
 @Entity

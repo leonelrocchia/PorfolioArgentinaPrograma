@@ -1,6 +1,8 @@
 package com.porfolioAP.backAP.Security.Entity;
 
 import javax.persistence.*;
+import javax.persistence.Id;
+
 import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
