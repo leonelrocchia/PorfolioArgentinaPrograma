@@ -9,11 +9,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Entity
 public class UsuarioPrincipal implements UserDetails {
 
-    @Id
-    private int id;
     private String nombre;
     private String username;
     private String email;
@@ -51,14 +48,6 @@ public class UsuarioPrincipal implements UserDetails {
 
     //Getter & setter
 
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getNombre() {
         return nombre;
